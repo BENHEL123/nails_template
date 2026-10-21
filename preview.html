@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Витрина сайтов: Маникюр и Репетиторы под ключ · Онлайн-запись и CRM</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --bg-card: #131a2a;
+      --bg-card-hover: #192339;
+      --line: #222d46;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --muted2: #64748b;
+      
+      --gold: #f59e0b;
+      --blue: #3b82f6;
+      --rose: #f43f5e;
+      --cyan: #06b6d4;
+      --emerald: #10b981;
+      
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background:
+        radial-gradient(80% 50% at 50% -10%, rgba(59, 130, 246, 0.18), transparent 70%),
+        var(--bg);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      padding: 44px 20px 80px;
+    }
+    .hub { max-width: 1160px; margin-inline: auto; }
+    .hub__top { text-align: center; margin-bottom: 50px; }
+    .hub__mark {
+      width: 58px; height: 58px;
+      margin: 0 auto 16px;
+      display: grid; place-items: center;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      font-size: 1.6rem;
+      color: #ffffff;
+      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.35);
+    }
+    .hub__kicker {
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+    h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hub__lead { color: var(--muted); max-width: 660px; margin: 16px auto 0; font-size: 1.05rem; line-height: 1.6; }
+
+    /* Category divider */
+    .cat-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 40px 0 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    .cat-head__icon { font-size: 1.5rem; }
+    .cat-head__title { font-size: 1.3rem; font-weight: 700; color: #ffffff; }
+    .cat-head__desc { font-size: 0.85rem; color: var(--muted); margin-left: auto; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--bg-card);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s cubic-bezier(.16,1,.3,1), border-color 0.25s, box-shadow 0.25s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #3b82f6;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+    .card__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .card__num {
+      font-size: 0.72rem; font-weight: 800;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--cyan);
+    }
+    .card__badge {
+      font-size: 0.72rem; font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(59, 130, 246, 0.14);
+      color: #60a5fa;
+    }
+    .card__title { font-size: 1.3rem; font-weight: 700; color: #fff; }
+    .card__text { color: var(--muted); font-size: 0.9rem; line-height: 1.55; flex: 1; }
+    .card__tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.03);
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+    .card__go {
+      margin-top: 10px;
+      align-self: flex-start;
+      padding: 11px 22px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #2563eb, #0284c7);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.88rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+    }
+    .card__go:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+    }
+    .card--crm .card__go {
+      background: linear-gradient(135deg, #10b981, #059669);
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+    }
+
+    /* Feature Highlight Banner */
+    .feature-banner {
+      margin: 40px 0;
+      padding: 28px 32px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.14), rgba(6, 182, 212, 0.14));
+      border: 1px solid rgba(59, 130, 246, 0.35);
+      border-radius: 20px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .feature-banner h2 { font-size: 1.35rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .feature-banner p { color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; }
+    .feature-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: #e2e8f0;
+    }
+    .feature-item strong { color: var(--cyan); }
+
+    .note {
+      padding: 28px;
+      border: 1px dashed var(--line);
+      border-radius: 20px;
+      background: #0e1422;
+      margin-top: 30px;
+    }
+    .note h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: #fff;
+    }
+    .note ol { padding-left: 20px; color: var(--muted); font-size: 0.92rem; line-height: 1.8; }
+    .note li { margin-bottom: 6px; }
+    .note code {
+      font-family: ui-monospace, SFMono-Regular, monospace;
+      font-size: 0.85em;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.1);
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+    .hub__footer { text-align: center; margin-top: 40px; color: var(--muted2); font-size: 0.82rem; }
+
+    @media (min-width: 680px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      .feature-banner { grid-template-columns: 1fr 1fr; align-items: center; }
+      .feature-list { grid-template-columns: 1fr; }
+    }
+    @media (min-width: 1024px) {
+      .grid--4 { grid-template-columns: repeat(4, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <main class="hub">
+    <header class="hub__top">
+      <div class="hub__mark">✦</div>
+      <p class="hub__kicker">Готовая платформа персональных сайтов</p>
+      <h1>Витрина сайтов под ключ: <em>Маникюр и Репетиторы</em></h1>
+      <p class="hub__lead">
+        Индивидуальные предметные сайты, единый движок онлайн-записи с защитой от накладок и персональные мобильные CRM-панели для мастеров.
+      </p>
+    </header>
+
+    <!-- BANNER: SMART BOOKING WITHOUT RE-TYPING -->
+    <section class="feature-banner">
+      <div>
+        <h2>⚡ Прощай, бумажная книжечка: быстрая запись в 1 клик</h2>
+        <p>
+          Больше не нужно переписываться по 20 минут в мессенджерах. А постоянным клиентам не приходится вводить телефон "по кд" каждый раз:
+        </p>
+      </div>
+      <div class="feature-list">
+        <div class="feature-item">
+          <span>🧠</span>
+          <div><strong>Умная память клиента:</strong> при повторном визите имя и номер подставляются автоматически — запись за 3 секунды.</div>
+        </div>
+        <div class="feature-item">
+          <span>🔗</span>
+          <div><strong>Персональные ссылки от мастера:</strong> отправьте клиенту ссылку с его именем и услугой (<code>?name=Марина</code>).</div>
+        </div>
+        <div class="feature-item">
+          <span>📱</span>
+          <div><strong>Виджет «Мои записи»:</strong> клиент сам видит статус брони, может отменить или перенести визит в 1 клик.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: REPETITORS BY SUBJECTS -->
+    <div class="cat-head">
+      <span class="cat-head__icon">🎓</span>
+      <h2 class="cat-head__title">Специализированные сайты репетиторов по предметам</h2>
+      <span class="cat-head__desc">Каждый предмет — экспертный сайт со своей программой</span>
+    </div>
+
+    <div class="grid grid--4">
+      <!-- 1. Math -->
+      <article class="card">
+        <div class="card__header">
+          <span class="card__num">01 · Математика</span>
+          <span class="card__badge">МГУ Мехмат</span>
+        </div>
+        <h3 class="card__title">Михаил Воронов</h3>
+        <p class="card__text">
+          ЕГЭ Профиль 80+, ОГЭ на максимум, геометрия и параметры. Интерактивный калькулятор баллов и прогноз роста.
+        </p>
+        <div class="card__tags">
+          <span class="tag">ЕГЭ 80+</span>
+          <span class="tag">ОГЭ</span>
+          <span class="tag">Калькулятор</span>
+          <span class="tag">Кобальт</span>
+        </div>
+        <a class="card__go" href="tutor-math/index.html">Открыть сайт Математики</a>
+      </article>
+
+      <!-- 2. Physics -->
+      <article class="card">
+        <div class="card__header">
+          <span class="card__num">02 · Физика</span>
+          <span class="card__badge">МФТИ (ФОПФ)</span>
+        </div>
+        <h3 class="card__title">Дмитрий Соколов</h3>
+        <p class="card__text">
+          Понимание физических законов без зубрежки формул. Механика, термодинамика, качественные задачи №21 и опыты.
+        </p>
+        <div class="card__tags">
+          <span class="tag">МФТИ</span>
+          <span class="tag">ОГЭ / ЕГЭ</span>
+          <span class="tag">Квантовый циан</span>
+          <span class="tag">Формулы</span>
+        </div>
+        <a class="card__go" href="tutor-physics/index.html">Открыть сайт Физики</a>
+      </article>
+
+      <!-- 3. Russian -->
+      <article class="card">
+        <div class="card__header">
+          <span class="card__num">03 · Русский язык</span>
+          <span class="card__badge">Филолог СПбГУ</span>
+        </div>
+        <h3 class="card__title">Анна Морозова</h3>
+        <p class="card__text">
+          Идеальное сочинение ЕГЭ по критериям ФИПИ (К1–К12), тестовая часть без ошибок, декабрьское сочинение.
+        </p>
+        <div class="card__tags">
+          <span class="tag">Сочинение 100%</span>
+          <span class="tag">СПбГУ</span>
+          <span class="tag">Бордо / Литература</span>
+        </div>
+        <a class="card__go" href="tutor-russian/index.html">Открыть сайт Русского</a>
+      </article>
+
+      <!-- 4. English -->
+      <article class="card">
+        <div class="card__header">
+          <span class="card__num">04 · Английский</span>
+          <span class="card__badge">CELTA · IELTS 8.5</span>
+        </div>
+        <h3 class="card__title">Дарья Власова</h3>
+        <p class="card__text">
+          Speaking Intensive: преодоление языкового барьера, подготовка к IELTS (Target 7.5+), ЕГЭ и шкала уровней CEFR.
+        </p>
+        <div class="card__tags">
+          <span class="tag">IELTS 7.5+</span>
+          <span class="tag">Speaking</span>
+          <span class="tag">CELTA</span>
+          <span class="tag">Оксфорд</span>
+        </div>
+        <a class="card__go" href="tutor-english/index.html">Открыть сайт Английского</a>
+      </article>
+    </div>
+
+    <!-- SECTION 2: BEAUTY / NAILS -->
+    <div class="cat-head">
+      <span class="cat-head__icon">💅</span>
+      <h2 class="cat-head__title">Сайты студий маникюра и бьюти-мастеров</h2>
+      <span class="cat-head__desc">Два настроения бренда с живыми фотографиями</span>
+    </div>
+
+    <div class="grid">
+      <!-- Nails A -->
+      <article class="card">
+        <div class="card__header">
+          <span class="card__num">Стиль A · Clean Girl</span>
+          <span class="card__badge">Светлый нюд</span>
+        </div>
+        <h3 class="card__title">NAILS by Ульяна</h3>
+        <p class="card__text">
+          Воздушный нюдовый дизайн, 3D-карусель готовых работ, блок видео-reels, прайс-лист и форма онлайн-записи.
+        </p>
+        <div class="card__tags">
+          <span class="tag">Нюд</span>
+          <span class="tag">3D-карусель</span>
+          <span class="tag">Reels</span>
+          <span class="tag">Живые фото</span>
+        </div>
+        <a class="card__go" href="index.html">Открыть Clean Girl</a>
+      </article>
+
+      <!-- Nails B -->
+      <article class="card">
+        <div class="card__header">
+          <span class="card__num">Стиль B · Editorial Luxe</span>
+          <span class="card__badge">Тёмный люкс</span>
+        </div>
+        <h3 class="card__title">Ульяна · Nail Atelier</h3>
+        <p class="card__text">
+          Премиальный тёмный кофейный фон, золото, крупная журнальная типографика, лента-фильм и бегущая строка.
+        </p>
+        <div class="card__tags">
+          <span class="tag">Тёмный люкс</span>
+          <span class="tag">Золото</span>
+          <span class="tag">Лента работ</span>
+          <span class="tag">Editorial</span>
+        </div>
+        <a class="card__go" href="variant-b/index.html">Открыть Editorial Luxe</a>
+      </article>
+    </div>
+
+    <!-- SECTION 3: ADMIN CRM PANELS -->
+    <div class="cat-head">
+      <span class="cat-head__icon">📱</span>
+      <h2 class="cat-head__title">Мобильные административные панели (CRM)</h2>
+      <span class="cat-head__desc">Управление расписанием, учениками, клиентами и кассой</span>
+    </div>
+
+    <div class="grid">
+      <!-- Admin Tutor -->
+      <article class="card card--crm">
+        <div class="card__header">
+          <span class="card__num">CRM Репетитора</span>
+          <span class="card__badge" style="background:rgba(16,185,129,0.15); color:#34d399">Мульти-предметная</span>
+        </div>
+        <h3 class="card__title">Панель репетитора (все предметы)</h3>
+        <p class="card__text">
+          Встроенный переключатель предметов <code>[📐 Мат] [⚡ Физ] [📖 Рус] [🌍 Англ]</code> прямо в шапке! Расписание с еженедельными повторами, карточки учеников с целями и уровнями, трекер домашних заданий, учет долгов и оплат.
+        </p>
+        <div class="card__tags">
+          <span class="tag">Смена предметов</span>
+          <span class="tag">Ученики</span>
+          <span class="tag">Долги</span>
+          <span class="tag">Д/З</span>
+          <span class="tag">1 клик перенос</span>
+        </div>
+        <a class="card__go" href="admin-tutor/index.html">Открыть панель репетитора</a>
+      </article>
+
+      <!-- Admin Nails -->
+      <article class="card card--crm">
+        <div class="card__header">
+          <span class="card__num">CRM Мастера</span>
+          <span class="card__badge" style="background:rgba(16,185,129,0.15); color:#34d399">Бьюти-сфера</span>
+        </div>
+        <h3 class="card__title">Панель мастера маникюра</h3>
+        <p class="card__text">
+          Расписание дня, блок «Ждут ответа» с колокольчиком уведомлений, база клиенток с заметками о форме и аллергиях, касса дня/недели/месяца и настройка свободных окон.
+        </p>
+        <div class="card__tags">
+          <span class="tag">Расписание дня</span>
+          <span class="tag">База клиенток</span>
+          <span class="tag">Касса</span>
+          <span class="tag">Настройка часов</span>
+        </div>
+        <a class="card__go" href="admin/index.html">Открыть панель мастера</a>
+      </article>
+    </div>
+
+    <!-- HOW TO TEST -->
+    <section class="note">
+      <h2>Как протестировать связку «Сайт + Память клиента + Админка»:</h2>
+      <ol>
+        <li>Откройте любой сайт (например, <strong>Математика</strong> или <strong>Clean Girl</strong>) и запишитесь на свободное время.</li>
+        <li>Обновите страницу: обратите внимание на плашку <code>«👋 С возвращением, Ваши данные заполнены»</code> — клиенту больше не нужно вводить имя и телефон по кд!</li>
+        <li>Внизу экрана появится плашка <code>«Моя запись: статус, перенос и отмена»</code> — клиент в 1 клик может отменить бронь.</li>
+        <li>Откройте панель репетитора или мастера в соседней вкладке — заявка уже там в блоке <strong>«Ждут ответа»</strong>. Нажмите <code>«Подтвердить»</code> или <code>«Перенести»</code>.</li>
+        <li>В панели репетитора переключайте предметы <code>[📐 Математика] [⚡ Физика] [📖 Русский] [🌍 Английский]</code>, чтобы посмотреть расписание каждого преподавателя.</li>
+      </ol>
+    </section>
+
+    <p class="hub__footer">
+      Все сайты и панели используют общий реактивный модуль <code>store.js</code> и готовы к интеграции с боевым REST API или Telegram-ботом.
+    </p>
+  </main>
+</body>
+</html>
