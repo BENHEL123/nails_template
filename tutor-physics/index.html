@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дмитрий Соколов — Репетитор по физике · ОГЭ и ЕГЭ 80+</title>
+  <meta name="description" content="Подготовка к ЕГЭ и ОГЭ по физике от выпускника МФТИ. Понимание природы явлений, вывод формул без зубрежки, задачи части 2.">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/booking.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <div class="wrap header__inner">
+      <a href="#top" class="logo">
+        <div class="logo__badge">⚡</div>
+        <div>
+          <span class="logo__title">Дмитрий Соколов</span>
+          <span class="logo__sub">Репетитор по физике · МФТИ</span>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="#programs" class="nav__link">Программы</a>
+        <a href="#topics" class="nav__link">Разделы физики</a>
+        <a href="#how" class="nav__link">Методика</a>
+        <a href="#booking" class="nav__link">Расписание</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="tel:+79991234567" class="header__phone">+7 (999) 123-45-67</a>
+        <a href="#booking" class="btn btn--cyan btn--sm">Пробный урок</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="wrap hero__grid">
+        <div class="hero__content">
+          <div class="hero__eyebrow">
+            <span>⚡ МФТИ (ФОПФ) · Эксперт ЕГЭ · 11 лет подготовки</span>
+          </div>
+          <h1 class="hero__title">
+            Физика на 80+ <em>без зубрёжки</em> сотен формул
+          </h1>
+          <p class="hero__lead">
+            Учу понимать суть природных явлений, а не заучивать сборники тестов. Выводим сложные соотношения из 5 базовых законов сохранения и уверенно решаем задачи №21–30.
+          </p>
+          <div class="hero__cta">
+            <a href="#booking" class="btn btn--cyan btn--lg">Записаться на диагностику</a>
+            <a href="#programs" class="btn btn--ghost btn--lg">Выбрать программу</a>
+          </div>
+
+          <div class="hero__stats">
+            <div>
+              <div class="hero__stat-num">82.4</div>
+              <div class="hero__stat-label">средний балл ЕГЭ 2025</div>
+            </div>
+            <div>
+              <div class="hero__stat-num">9 из 10</div>
+              <div class="hero__stat-label">сдали ОГЭ на «5»</div>
+            </div>
+            <div>
+              <div class="hero__stat-num">180+</div>
+              <div class="hero__stat-label">будущих инженеров и IT</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <div class="hero-card">
+            <img class="hero-card__img" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80" alt="Дмитрий Соколов — репетитор по физике">
+            <div class="hero-card__badge">
+              <div>
+                <p class="hero-card__title">Результат за 7 месяцев</p>
+                <p class="hero-card__sub">Кирилл М. · Бауманка (ИУ)</p>
+              </div>
+              <div class="hero-card__score">46 → 84</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROGRAMS ============ -->
+    <section class="section section--darker" id="programs">
+      <div class="wrap">
+        <div class="section__head">
+          <span class="section__kicker">Курсы и форматы</span>
+          <h2 class="section__title">Программы подготовки по физике</h2>
+          <p class="section__lead">Индивидуальные занятия с интерактивными симуляциями физических процессов, разбором реальных экспериментов и понятным языком.</p>
+        </div>
+
+        <div class="subjects-grid" id="subjects-grid">
+          <!-- Карточки из store.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TOPICS ============ -->
+    <section class="section" id="topics">
+      <div class="wrap">
+        <div class="section__head">
+          <span class="section__kicker">Система тем</span>
+          <h2 class="section__title">4 столпа школьной физики</h2>
+          <p class="section__lead">Разбираем каждую область глубоко и системно, связывая математику с реальной физической картиной мира.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">M</div>
+            <h3>Механика</h3>
+            <p>Кинематика, законы Ньютона, импульс, энергия и колебания. Фундамент для половины задач экзамена.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">T</div>
+            <h3>Термодинамика и МКТ</h3>
+            <p>Уравнение Менделеева-Клапейрона, КПД циклов, влажность и графики тепловых процессов.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">E</div>
+            <h3>Электродинамика</h3>
+            <p>Закон Ома, расчет сложных цепей, электромагнитная индукция и правило Ленца без путаницы.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">Q</div>
+            <h3>Оптика и кванты</h3>
+            <p>Геометрическая оптика, фотоэффект, уравнение Эйнштейна, радиоактивный распад и атомные ядра.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING ============ -->
+    <section class="booking-section" id="booking">
+      <div class="wrap booking-wrap">
+        <div class="booking-info">
+          <h2>Онлайн-запись на урок</h2>
+          <p>Выберите удобный свободный слот в графике. На пробном уроке проверим текущие знания и составим план выхода на 80+.</p>
+
+          <div class="booking-features">
+            <div class="feat-row">
+              <div class="feat-icon">⚡</div>
+              <div class="feat-text">
+                <strong>Свободные окна в реальном времени</strong>
+                <span>Вы видите актуальное расписание преподавателя без звонков и долгих переписок.</span>
+              </div>
+            </div>
+            <div class="feat-row">
+              <div class="feat-icon">🎯</div>
+              <div class="feat-text">
+                <strong>Умная память контактов</strong>
+                <span>Данные сохраняются в браузере — при повторном визите запись подтверждается за 2 клика.</span>
+              </div>
+            </div>
+            <div class="feat-row">
+              <div class="feat-icon">↻</div>
+              <div class="feat-text">
+                <strong>Пакетные занятия с выгодой до 15%</strong>
+                <span>Возможность регулярного бронирования еженедельного слота.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORM CARD -->
+        <div class="form-card">
+          <h3 class="form-title">Забронировать занятие</h3>
+
+          <form id="booking-form" novalidate>
+            <input type="text" id="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+            <input type="hidden" id="datetime">
+
+            <div class="field">
+              <label for="service">Направление подготовки *</label>
+              <select id="service" class="field-select" required>
+                <option value="" disabled selected>Загрузка направлений…</option>
+              </select>
+              <span class="error-msg" data-error-for="service"></span>
+            </div>
+
+            <div class="field">
+              <label for="format">Формат занятий</label>
+              <select id="format" class="field-select">
+                <option value="online">Онлайн (интерактивные симуляторы PhET + Miro)</option>
+                <option value="offline">Кабинет (м. Сокол, опыты и лаборатория)</option>
+                <option value="student">Выезд к ученику</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Свободные дни:</label>
+              <div class="slots-days" id="slots-days"></div>
+            </div>
+
+            <div class="field">
+              <label>Свободные часы:</label>
+              <div class="slots-grid" id="slots-grid"></div>
+              <span class="error-msg" data-error-for="datetime"></span>
+            </div>
+
+            <div class="field">
+              <label for="name">Имя ученика или родителя *</label>
+              <input type="text" id="name" class="field-input" placeholder="Например: Кирилл или Татьяна" required>
+              <span class="error-msg" data-error-for="name"></span>
+            </div>
+
+            <div class="field">
+              <label for="phone">Номер телефона (Telegram / WhatsApp) *</label>
+              <input type="tel" id="phone" class="field-input" placeholder="+7 (___) ___-__-__" required>
+              <span class="error-msg" data-error-for="phone"></span>
+            </div>
+
+            <div class="field">
+              <label for="comment">Текущий уровень или класс (необязательно)</label>
+              <input type="text" id="comment" class="field-input" placeholder="Например: 11 класс, путаюсь в электричестве">
+            </div>
+
+            <div class="toggles-group">
+              <label class="toggle-item">
+                <input type="checkbox" id="trial" checked>
+                <span><strong>Пробное занятие</strong> (диагностика + разбор сложной задачи)</span>
+              </label>
+
+              <label class="toggle-item">
+                <input type="checkbox" id="repeat">
+                <span>Заниматься <strong>каждую неделю в это же время</strong></span>
+              </label>
+            </div>
+
+            <div class="field" style="margin-top:14px">
+              <label class="toggle-item" style="font-size:0.8rem; color:var(--text-muted)">
+                <input type="checkbox" id="privacy" checked required>
+                <span>Согласен(на) на обработку данных по <a href="../privacy.html" style="color:var(--cyan); text-decoration:underline" target="_blank">152-ФЗ</a></span>
+              </label>
+              <span class="error-msg" data-error-for="privacy"></span>
+            </div>
+
+            <button type="submit" class="btn btn--cyan submit-btn form__submit">Забронировать время</button>
+
+            <div class="success-box" id="form-success" hidden>
+              <h3>⚡ Заявка успешно отправлена!</h3>
+              <p id="success-note">Время зарезервировано. Преподаватель напишет вам в течение 15 минут для подтверждения слота.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__top">
+        <div>
+          <span style="font-size:1.3rem; font-weight:800; color:#fff">Дмитрий Соколов</span>
+          <p style="color:#94a3b8; font-size:0.88rem; margin-top:4px">Репетитор по физике · МФТИ (ФОПФ)</p>
+        </div>
+        <div style="display:flex; gap:16px">
+          <a href="../preview.html" class="btn btn--ghost btn--sm">← Все сайты витрины</a>
+          <a href="../admin-tutor/index.html?role=tutor-physics" class="btn btn--ghost btn--sm">Панель репетитора</a>
+        </div>
+      </div>
+      <div class="footer__copy">
+        <span>© 2026 Дмитрий Соколов. Все права защищены.</span>
+        <span><a href="../privacy.html" style="color:#94a3b8; text-decoration:underline">Политика конфиденциальности</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.NAILS_ROLE = 'tutor-physics';
+  </script>
+  <script src="../shared/store.js"></script>
+  <script src="../shared/booking.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

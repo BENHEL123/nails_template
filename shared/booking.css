@@ -1,0 +1,107 @@
+/* ============================================================
+   Shared Booking Widget & Client Memory Styles
+   ============================================================ */
+
+/* Плашка «С возвращением» */
+.memory-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  color: #1e3a8a;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+.memory-badge strong { font-weight: 700; color: #1e40af; }
+.memory-badge__btn {
+  background: none;
+  border: 0;
+  color: #3b82f6;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0;
+  white-space: nowrap;
+}
+.memory-badge__btn:hover { color: #1d4ed8; text-decoration: none; }
+
+/* Виджет «Моя активная запись» (плавающая плашка внизу экрана) */
+.my-bookings-pill {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  width: calc(100% - 32px);
+  max-width: 580px;
+  background: rgba(24, 24, 27, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 16px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.12);
+  animation: slideUpPill 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes slideUpPill {
+  from { opacity: 0; transform: translate(-50%, 20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+.my-bookings-pill__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.my-bookings-pill__info {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #e4e4e7;
+}
+.my-bookings-pill__info strong { color: #38bdf8; font-weight: 700; }
+.my-bookings-pill__status {
+  display: block;
+  font-size: 0.75rem;
+  color: #a1a1aa;
+  margin-top: 2px;
+}
+.btn-pill-cancel {
+  background: rgba(239, 68, 68, 0.16);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+.btn-pill-cancel:hover {
+  background: rgba(239, 68, 68, 0.32);
+  color: #ffffff;
+}
+
+/* Бейджи уровней и цен */
+.price-pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: rgba(148, 163, 184, 0.14);
+  color: inherit;
+  opacity: 0.85;
+}
+.price-row__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}

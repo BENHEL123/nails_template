@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Михаил Воронов — Репетитор по математике · ОГЭ и ЕГЭ 80+</title>
+  <meta name="description" content="Экспертная подготовка к профильному ЕГЭ и ОГЭ по математике. Без зубрёжки. Разбор параметров, геометрии и теории чисел. Онлайн и очно.">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/booking.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <div class="wrap header__inner">
+      <a href="#top" class="logo">
+        <div class="logo__badge">∑</div>
+        <div>
+          <span class="logo__title">Михаил Воронов</span>
+          <span class="logo__sub">Репетитор по математике · МГУ</span>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="#programs" class="nav__link">Программы</a>
+        <a href="#calculator" class="nav__link">Калькулятор баллов</a>
+        <a href="#how" class="nav__link">Методика</a>
+        <a href="#results" class="nav__link">Результаты</a>
+        <a href="#booking" class="nav__link">Расписание</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="tel:+79991234567" class="header__phone">+7 (999) 123-45-67</a>
+        <a href="#booking" class="btn btn--primary btn--sm">Записаться на пробное</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="wrap hero__grid">
+        <div class="hero__content">
+          <div class="hero__eyebrow">
+            <span>📐 МГУ им. Ломоносова · Мехмат · Стаж 12 лет</span>
+          </div>
+          <h1 class="hero__title">
+            Сдам <em>ЕГЭ по математике</em> на 80+ без страха и зубрёжки
+          </h1>
+          <p class="hero__lead">
+            Понятная логика вместо шаблонных решений. Учу видеть идею в сложных задачах второй части: параметрах №17, планиметрии №16 и теории чисел №18.
+          </p>
+          <div class="hero__cta">
+            <a href="#booking" class="btn btn--primary btn--lg">Записаться на диагностику</a>
+            <a href="#calculator" class="btn btn--ghost btn--lg">Рассчитать целевой балл</a>
+          </div>
+
+          <div class="hero__stats">
+            <div>
+              <div class="hero__stat-num">84.6</div>
+              <div class="hero__stat-label">средний балл ЕГЭ 2025</div>
+            </div>
+            <div>
+              <div class="hero__stat-num">94%</div>
+              <div class="hero__stat-label">поступили на бюджет</div>
+            </div>
+            <div>
+              <div class="hero__stat-num">240+</div>
+              <div class="hero__stat-label">выпускников за 12 лет</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <div class="hero-card">
+            <img class="hero-card__img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Михаил Воронов — репетитор по математике">
+            <div class="hero-card__badge">
+              <div>
+                <p class="hero-card__title">Прогресс за 6 месяцев</p>
+                <p class="hero-card__sub">Арсений Т. · ЕГЭ Профиль</p>
+              </div>
+              <div class="hero-card__score">42 → 88</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CALCULATOR ============ -->
+    <section class="section section--tinted" id="calculator">
+      <div class="wrap">
+        <div class="section__head">
+          <span class="section__kicker">Интерактивный расчёт</span>
+          <h2 class="section__title">Оцените шансы на бюджет</h2>
+          <p class="section__lead">Выберите текущий балл на пробнике и узнайте реалистичный прогноз роста при регулярных занятиях.</p>
+        </div>
+
+        <div class="calc-box">
+          <div class="calc-grid">
+            <div class="calc-col">
+              <label for="current-score">Текущий результат пробника:</label>
+              <input type="range" id="current-score" class="calc-range" min="30" max="80" value="48" step="2">
+              <div class="calc-score-display">
+                <span>Сейчас:</span>
+                <span id="current-score-val">48 баллов</span>
+              </div>
+            </div>
+
+            <div class="calc-col">
+              <label for="target-target">Целевой вуз / планка:</label>
+              <select id="target-target" class="field-select">
+                <option value="80">Топовый технический (ВШЭ, МФТИ, Бауманка) — 80–90+</option>
+                <option value="72">Экономический / IT бюджет — 72–80</option>
+                <option value="65">Уверенное поступление на бюджет — 65–72</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc-result" id="calc-result">
+            <strong>🎯 Прогноз подготовки: 84–88 баллов</strong>
+            <p>При старте с 48 баллов рекомендована программа «ЕГЭ Профиль 80+» (занятия 2 раза в неделю). Основной фокус: закрытие всей 1 части без глупых ошибок за 25 минут + отработка задач №13, 15 и 17.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROGRAMS ============ -->
+    <section class="section" id="programs">
+      <div class="wrap">
+        <div class="section__head">
+          <span class="section__kicker">Направления подготовки</span>
+          <h2 class="section__title">Программы и стоимость</h2>
+          <p class="section__lead">Индивидуальные занятия с интерактивной доской Miro, персональным трекером домашних заданий и отчётом родителям.</p>
+        </div>
+
+        <div class="subjects-grid" id="subjects-grid">
+          <!-- Карточки загружаются или рендерятся из store.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section section--tinted" id="how">
+      <div class="wrap">
+        <div class="section__head">
+          <span class="section__kicker">Методика</span>
+          <h2 class="section__title">Как построена подготовка</h2>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">1</div>
+            <h3>Диагностика</h3>
+            <p>На пробном уроке определяем не «оценку», а точные слепые зоны: где теряются формулы и чертежи.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">2</div>
+            <h3>Личный план</h3>
+            <p>Индивидуальная карта тем до мая. Ученик всегда знает, какую задачу разбираем сегодня и зачем.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">3</div>
+            <h3>Практика 80/20</h3>
+            <p>20% объяснение сути, 80% самостоятельное решение с наводящими вопросами без подсказок в лоб.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">4</div>
+            <h3>Ежемесячный пробник</h3>
+            <p>Полная симуляция реального экзамена с таймером и проверкой по официальным критериям ФИПИ.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING ============ -->
+    <section class="booking-section" id="booking">
+      <div class="wrap booking-wrap">
+        <div class="booking-info">
+          <h2>Запись на занятия</h2>
+          <p>Выберите удобное время в интерактивном расписании. Первое занятие — диагностическое (пробное со скидкой).</p>
+
+          <div class="booking-features">
+            <div class="feat-row">
+              <div class="feat-icon">✓</div>
+              <div class="feat-text">
+                <strong>Мгновенное бронирование окна</strong>
+                <span>Окно сразу закрепляется за вами и исчезает из общего расписания.</span>
+              </div>
+            </div>
+            <div class="feat-row">
+              <div class="feat-icon">⚡</div>
+              <div class="feat-text">
+                <strong>Умная память постоянных учеников</strong>
+                <span>Не нужно вводить телефон каждый раз — при повторном визите всё готово в 1 клик.</span>
+              </div>
+            </div>
+            <div class="feat-row">
+              <div class="feat-icon">↻</div>
+              <div class="feat-text">
+                <strong>Фиксация времени на учебный год</strong>
+                <span>Возможность закрепить слот на каждую неделю вперед с пакетом скидок.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORM CARD -->
+        <div class="form-card">
+          <h3 class="form-title">Выбор даты и времени</h3>
+
+          <form id="booking-form" novalidate>
+            <!-- Honeypot -->
+            <input type="text" id="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+            <input type="hidden" id="datetime">
+
+            <!-- 1. Направление -->
+            <div class="field">
+              <label for="service">Программа обучения *</label>
+              <select id="service" class="field-select" required>
+                <option value="" disabled selected>Загрузка программ…</option>
+              </select>
+              <span class="error-msg" data-error-for="service"></span>
+            </div>
+
+            <!-- 2. Формат -->
+            <div class="field">
+              <label for="format">Формат занятий</label>
+              <select id="format" class="field-select">
+                <option value="online">Онлайн (Zoom + доска Miro)</option>
+                <option value="offline">У преподавателя (м. Университет)</option>
+                <option value="student">Выезд к ученику</option>
+              </select>
+            </div>
+
+            <!-- 3. Дни -->
+            <div class="field">
+              <label>Свободные дни на этой неделе:</label>
+              <div class="slots-days" id="slots-days"></div>
+            </div>
+
+            <!-- 4. Слоты -->
+            <div class="field">
+              <label>Свободное время:</label>
+              <div class="slots-grid" id="slots-grid"></div>
+              <span class="error-msg" data-error-for="datetime"></span>
+            </div>
+
+            <!-- 5. Имя и телефон -->
+            <div class="field">
+              <label for="name">Имя ученика или родителя *</label>
+              <input type="text" id="name" class="field-input" placeholder="Например: Арсений или Ольга (мама)" required>
+              <span class="error-msg" data-error-for="name"></span>
+            </div>
+
+            <div class="field">
+              <label for="phone">Номер телефона (Telegram / WhatsApp) *</label>
+              <input type="tel" id="phone" class="field-input" placeholder="+7 (___) ___-__-__" required>
+              <span class="error-msg" data-error-for="phone"></span>
+            </div>
+
+            <div class="field">
+              <label for="comment">Цель или текущий класс (необязательно)</label>
+              <input type="text" id="comment" class="field-input" placeholder="Например: 11 класс, готовимся к профилю">
+            </div>
+
+            <!-- 6. Тумблеры: пробное и еженедельно -->
+            <div class="toggles-group">
+              <label class="toggle-item">
+                <input type="checkbox" id="trial" checked>
+                <span><strong>Пробное занятие</strong> (диагностика уровня и составление плана)</span>
+              </label>
+
+              <label class="toggle-item">
+                <input type="checkbox" id="repeat">
+                <span>Заниматься <strong>каждую неделю в это же время</strong></span>
+              </label>
+            </div>
+
+            <!-- 7. Согласие -->
+            <div class="field" style="margin-top:14px">
+              <label class="toggle-item" style="font-size:0.8rem; color:var(--text-muted)">
+                <input type="checkbox" id="privacy" checked required>
+                <span>Согласен(на) на обработку данных по <a href="../privacy.html" style="text-decoration:underline" target="_blank">152-ФЗ</a></span>
+              </label>
+              <span class="error-msg" data-error-for="privacy"></span>
+            </div>
+
+            <button type="submit" class="btn btn--primary submit-btn form__submit">Подтвердить запись</button>
+
+            <!-- Success Box -->
+            <div class="success-box" id="form-success" hidden>
+              <h3>🎉 Заявка успешно принята!</h3>
+              <p id="success-note">Время забронировано. Преподаватель свяжется с вами в Telegram/WhatsApp для подтверждения ссылки на урок.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__top">
+        <div>
+          <span style="font-size:1.3rem; font-weight:800; color:#fff">Михаил Воронов</span>
+          <p style="color:#94a3b8; font-size:0.88rem; margin-top:4px">Репетитор по математике · МГУ им. М.В. Ломоносова</p>
+        </div>
+        <div style="display:flex; gap:16px">
+          <a href="../preview.html" class="btn btn--ghost btn--sm" style="background:#1e293b; color:#fff; border-color:#334155">← Все сайты витрины</a>
+          <a href="../admin-tutor/index.html?role=tutor-math" class="btn btn--ghost btn--sm" style="background:#1e293b; color:#fff; border-color:#334155">Панель репетитора</a>
+        </div>
+      </div>
+      <div class="footer__copy">
+        <span>© 2026 Михаил Воронов. Все права защищены.</span>
+        <span><a href="../privacy.html" style="color:#94a3b8; text-decoration:underline">Политика конфиденциальности</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    window.NAILS_ROLE = 'tutor-math';
+  </script>
+  <script src="../shared/store.js"></script>
+  <script src="../shared/booking.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

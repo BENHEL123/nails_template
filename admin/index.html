@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#fdfaf7">
+  <title>Панель мастера — NAILS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div class="app">
+  <header class="app__header">
+    <div class="app__hello">
+      <span class="app__avatar">У</span>
+      <div>
+        <p class="app__greet">Привет, Ульяна</p>
+        <p class="app__date" id="today-label">Сегодня</p>
+      </div>
+    </div>
+    <button class="icon-btn" type="button" id="bell" aria-label="Уведомления" aria-expanded="false" aria-controls="notif">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+      <span class="icon-btn__badge" id="bell-badge" hidden>0</span>
+    </button>
+  </header>
+
+  <!-- ============ УВЕДОМЛЕНИЯ ============ -->
+  <div class="notif" id="notif" aria-hidden="true">
+    <div class="notif__backdrop" data-notif-close></div>
+    <div class="notif__panel">
+      <div class="notif__head">
+        <span class="notif__title">Уведомления</span>
+        <button class="link-btn" type="button" data-notif-read>Прочитать все</button>
+      </div>
+      <div class="notif__list" id="notif-list"></div>
+    </div>
+  </div>
+
+  <main class="app__main">
+
+    <!-- ================= СЕГОДНЯ ================= -->
+    <section class="screen is-active" id="screen-today">
+      <div class="week" id="week-strip"></div>
+
+      <div class="pending" id="pending-block">
+        <div class="pending__head">
+          <span class="pulse"></span>
+          Ждут ответа <span class="pending__count" id="pending-count">2</span>
+        </div>
+        <div id="pending-list"></div>
+      </div>
+
+      <div class="day-head">
+        <h2 class="day-head__title" id="day-title">Расписание</h2>
+        <button class="link-btn" type="button" id="close-day">Закрыть день</button>
+      </div>
+
+      <div class="schedule" id="schedule-list"></div>
+
+      <div class="day-summary" id="day-summary"></div>
+    </section>
+
+    <!-- ================= КЛИЕНТЫ ================= -->
+    <section class="screen" id="screen-clients">
+      <div class="search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="client-search" placeholder="Найти клиентку" autocomplete="off">
+      </div>
+      <div class="clients" id="clients-list"></div>
+    </section>
+
+    <!-- ================= КАССА ================= -->
+    <section class="screen" id="screen-money">
+      <div class="money-hero">
+        <p class="money-hero__label">Сегодня</p>
+        <p class="money-hero__sum" id="money-today">0 ₽</p>
+        <div class="money-hero__row">
+          <div><span>За неделю</span><strong id="money-week">0 ₽</strong></div>
+          <div><span>За месяц</span><strong id="money-month">0 ₽</strong></div>
+        </div>
+      </div>
+      <h3 class="block-title">Выполненные визиты</h3>
+      <div class="money-list" id="money-list"></div>
+    </section>
+
+    <!-- ================= ЕЩЁ ================= -->
+    <section class="screen" id="screen-more">
+      <div class="settings-card">
+        <button class="setting" type="button" data-sheet="services">
+          <span class="setting__icon">💅</span>
+          <span class="setting__text"><strong>Услуги и цены</strong><small>Меняются сразу на сайте</small></span>
+          <span class="setting__arrow">›</span>
+        </button>
+        <button class="setting" type="button" data-sheet="hours">
+          <span class="setting__icon">🕘</span>
+          <span class="setting__text"><strong>График работы</strong><small>Пн–Сб, 10:00–21:00</small></span>
+          <span class="setting__arrow">›</span>
+        </button>
+        <button class="setting" type="button" data-sheet="notify">
+          <span class="setting__icon">🔔</span>
+          <span class="setting__text"><strong>Уведомления</strong><small>Push включён · СМС выкл.</small></span>
+          <span class="setting__arrow">›</span>
+        </button>
+        <button class="setting" type="button" data-sheet="portfolio">
+          <span class="setting__icon">🖼️</span>
+          <span class="setting__text"><strong>Портфолио</strong><small>8 работ на сайте</small></span>
+          <span class="setting__arrow">›</span>
+        </button>
+      </div>
+
+      <div class="site-card">
+        <div class="site-card__qr" aria-hidden="true">
+          <svg viewBox="0 0 29 29" width="96" height="96" shape-rendering="crispEdges">
+            <rect width="29" height="29" fill="#fff"/>
+            <g fill="#3d3129">
+              <path d="M1 1h7v7H1zM2 2h5v5H2z"/><path d="M1 21h7v7H1zM2 22h5v5H2z"/><path d="M21 1h7v7h-7zM22 2h5v5h-5z"/>
+              <path d="M10 1h1v1h-1zM12 1h1v2h-1zM14 1h1v1h-1zM10 3h1v1h-1zM13 3h2v1h-2zM10 5h2v1h-2zM13 5h1v1h-1zM15 2h1v2h-1zM16 4h1v2h-1z"/>
+              <path d="M1 10h2v1H1zM4 10h1v2H4zM6 10h2v1H6zM1 12h1v1H1zM3 12h2v1H3zM6 13h1v1H6zM1 14h2v1H1zM4 14h1v2H4zM6 15h2v1H6z"/>
+              <path d="M10 9h2v1h-2zM13 9h1v1h-1zM15 9h2v1h-2zM18 9h2v1h-2zM23 9h2v1h-2zM26 9h2v1h-2z"/>
+              <path d="M9 11h1v2H9zM11 11h2v1h-2zM14 11h2v2h-2zM17 11h1v1h-1zM19 11h2v1h-2zM22 11h2v1h-2zM25 11h1v2h-1zM27 11h1v2h-1z"/>
+              <path d="M10 14h1v1h-1zM12 14h2v1h-2zM16 14h1v2h-1zM18 14h1v1h-1zM20 14h2v2h-2zM23 14h1v1h-1zM26 14h2v1h-2zM9 16h3v1H9zM13 16h2v1h-2zM17 16h2v1h-2zM21 16h1v2h-1zM24 16h2v1h-2zM27 16h1v1h-1z"/>
+              <path d="M10 18h1v1h-1zM12 18h2v2h-2zM15 18h1v1h-1zM18 18h2v1h-2zM23 18h1v1h-1zM25 18h2v1h-2zM9 20h2v1H9zM13 20h1v1h-1zM16 20h2v1h-2zM19 20h1v2h-1zM22 20h2v1h-2zM26 20h1v1h-1z"/>
+              <path d="M10 22h2v1h-2zM14 22h1v2h-1zM16 22h1v1h-1zM18 22h2v1h-2zM21 22h1v1h-1zM24 22h1v1h-1zM27 22h1v1h-1zM9 24h1v1H9zM11 24h2v1h-2zM15 24h2v1h-2zM19 24h2v1h-2zM23 24h1v1h-1zM25 24h1v1h-1zM27 24h1v2h-1z"/>
+              <path d="M10 26h1v1h-1zM13 26h2v1h-2zM16 26h1v1h-1zM18 26h2v1h-2zM22 26h2v1h-2zM26 26h1v1h-1z"/>
+            </g>
+          </svg>
+        </div>
+        <div class="site-card__info">
+          <p class="site-card__title">Мой сайт</p>
+          <p class="site-card__link">nails-ulyana.ru</p>
+          <div class="site-card__actions">
+            <button class="chip-btn" type="button" data-toast="Ссылка скопирована">Скопировать</button>
+            <button class="chip-btn" type="button" data-toast="Открываю предпросмотр">Посмотреть</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <button class="setting" type="button" data-toast="Помощь откроется позже">
+          <span class="setting__icon">💬</span>
+          <span class="setting__text"><strong>Поддержка</strong><small>Отвечаем в течение дня</small></span>
+          <span class="setting__arrow">›</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <button class="fab" type="button" id="fab-add" aria-label="Записать клиента">+</button>
+
+  <nav class="tabbar" aria-label="Навигация">
+    <button class="tab is-active" type="button" data-tab="today">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      <span>Сегодня</span>
+    </button>
+    <button class="tab" type="button" data-tab="clients">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>
+      <span>Клиенты</span>
+    </button>
+    <button class="tab" type="button" data-tab="money">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/></svg>
+      <span>Касса</span>
+    </button>
+    <button class="tab" type="button" data-tab="more">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+      <span>Ещё</span>
+    </button>
+  </nav>
+
+  <!-- ============ РЕДАКТОР ГРАФИКА ============ -->
+  <div class="editor" id="schedule-editor" hidden aria-hidden="true">
+    <header class="editor__bar">
+      <button class="editor__back" type="button" data-editor-close aria-label="Назад">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <h2 class="editor__title">График работы</h2>
+      <button class="editor__save" type="button" data-editor-save>Сохранить</button>
+    </header>
+    <div class="editor__body" id="sched-body"></div>
+  </div>
+
+  <!-- ============ SHEET ============ -->
+  <div class="sheet" id="sheet" aria-hidden="true">
+    <div class="sheet__backdrop" data-close-sheet></div>
+    <div class="sheet__panel" role="dialog" aria-modal="true">
+      <div class="sheet__grip" data-close-sheet></div>
+      <div class="sheet__content" id="sheet-content"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+
+<script src="../shared/store.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

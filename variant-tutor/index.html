@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Репетитор по математике, физике и информатике. Подготовка к ОГЭ и ЕГЭ, понятное объяснение, пробное занятие. Онлайн и офлайн.">
+  <meta name="theme-color" content="#f7f4ee">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <title>Елена Сергеевна — репетитор · ОГЭ и ЕГЭ</title>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Елена Сергеевна — репетитор · подготовка к ОГЭ и ЕГЭ">
+  <meta property="og:description" content="Математика, физика, информатика. Диагностика, план и понятные объяснения. Первое занятие — пробное.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ TOPBAR ============ -->
+  <header class="topbar" id="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#top">
+        <span class="brand__mark">ЕС</span>
+        <span class="brand__text">
+          <strong>Елена Сергеевна</strong>
+          <small>репетитор · ОГЭ и ЕГЭ</small>
+        </span>
+      </a>
+
+      <nav class="topnav" aria-label="Основная навигация">
+        <a class="topnav__link" href="#subjects">Предметы</a>
+        <a class="topnav__link" href="#how">Как занятия</a>
+        <a class="topnav__link" href="#results">Результаты</a>
+        <a class="topnav__link" href="#price">Цены</a>
+        <a class="topnav__link" href="#faq">Вопросы</a>
+      </nav>
+
+      <div class="topbar__actions">
+        <a class="topbar__phone" href="tel:+79990000000">+7 999 000-00-00</a>
+        <a class="btn btn--primary btn--sm" href="#booking">Пробное занятие</a>
+        <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-controls="menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__panel" aria-label="Меню">
+      <a class="menu__link" href="#subjects">Предметы</a>
+      <a class="menu__link" href="#how">Как проходят занятия</a>
+      <a class="menu__link" href="#results">Результаты</a>
+      <a class="menu__link" href="#about">Обо мне</a>
+      <a class="menu__link" href="#price">Цены</a>
+      <a class="menu__link" href="#faq">Вопросы</a>
+      <a class="menu__link" href="#booking">Записаться</a>
+      <a class="menu__phone" href="tel:+79990000000">+7 999 000-00-00</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="wrap hero__inner">
+        <div class="hero__text">
+          <p class="kicker">Репетитор · Москва и онлайн</p>
+          <h1 class="hero__title">Подтяну к&nbsp;ОГЭ и&nbsp;ЕГЭ <span>без зубрёжки</span></h1>
+          <p class="hero__lead">
+            Математика, физика, информатика и русский. Сначала диагностика, потом понятный план,
+            потом регулярные занятия. Первое занятие — пробное.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="#booking">Записаться на пробное</a>
+            <a class="btn btn--ghost btn--lg" href="#subjects">Выбрать предмет</a>
+          </div>
+          <ul class="hero__stats">
+            <li><strong>120+</strong><span>учеников</span></li>
+            <li><strong>84</strong><span>средний балл</span></li>
+            <li><strong>9</strong><span>лет опыта</span></li>
+            <li><strong>60+</strong><span>отзывов</span></li>
+          </ul>
+        </div>
+
+        <aside class="hero__card" aria-hidden="true">
+          <p class="hero__card-title">Прогресс за 3 месяца</p>
+          <div class="bar">
+            <div class="bar__head"><span>Математика · ОГЭ</span><b>62 → 91</b></div>
+            <div class="bar__track"><div class="bar__fill" style="width:91%">91</div></div>
+          </div>
+          <div class="bar">
+            <div class="bar__head"><span>Физика · ЕГЭ</span><b>48 → 79</b></div>
+            <div class="bar__track"><div class="bar__fill bar__fill--2" style="width:79%">79</div></div>
+          </div>
+          <div class="bar">
+            <div class="bar__head"><span>Информатика · ЕГЭ</span><b>55 → 85</b></div>
+            <div class="bar__track"><div class="bar__fill bar__fill--3" style="width:85%">85</div></div>
+          </div>
+          <p class="hero__card-note">Средний рост балла за подготовку — +24</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ SUBJECTS ============ -->
+    <section class="section section--paper" id="subjects">
+      <div class="wrap">
+        <header class="head" data-reveal>
+          <span class="head__kicker">Направления</span>
+          <h2 class="head__title">Предметы и уровни</h2>
+          <p class="head__sub">Беру учеников с любым стартовым уровнем — от «совсем не понимаю» до «нужны 90+».</p>
+        </header>
+        <div class="subjects" id="subjects-grid" data-reveal></div>
+      </div>
+    </section>
+
+    <!-- ============ HOW ============ -->
+    <section class="section" id="how">
+      <div class="wrap">
+        <header class="head" data-reveal>
+          <span class="head__kicker">Процесс</span>
+          <h2 class="head__title">Как проходят занятия</h2>
+        </header>
+
+        <ol class="steps" data-reveal>
+          <li class="step">
+            <span class="step__num">1</span>
+            <h3>Диагностика</h3>
+            <p>На пробном занятии смотрим, что уже получается, а где пробелы. Без тестов ради тестов.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">2</span>
+            <h3>План подготовки</h3>
+            <p>Составляю план до экзамена: темы по порядку, сроки, пробные работы. Вы видите, куда идём.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">3</span>
+            <h3>Регулярные занятия</h3>
+            <p>Разбираем тему, решаем вместе, потом самостоятельно. Домашка — чтобы закрепить, а не «для галочки».</p>
+          </li>
+          <li class="step">
+            <span class="step__num">4</span>
+            <h3>Контроль прогресса</h3>
+            <p>Раз в месяц — пробник и отчёт родителю: что выросло, что подтянуть. Без сюрпризов на экзамене.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ RESULTS ============ -->
+    <section class="section section--ink" id="results">
+      <div class="wrap">
+        <header class="head" data-reveal>
+          <span class="head__kicker">Результаты</span>
+          <h2 class="head__title">Что получается на выходе</h2>
+          <p class="head__sub">Средние результаты учеников за последние два года.</p>
+        </header>
+
+        <div class="results" data-reveal>
+          <div class="result">
+            <strong>+24</strong>
+            <span>средний рост балла за подготовку</span>
+          </div>
+          <div class="result">
+            <strong>18</strong>
+            <span>учеников сдали ЕГЭ на 80+</span>
+          </div>
+          <div class="result">
+            <strong>92%</strong>
+            <span>поступили на бюджет</span>
+          </div>
+          <div class="result">
+            <strong>4,7</strong>
+            <span>средняя оценка занятий</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="wrap about">
+        <figure class="about__photo" data-reveal>
+          <img src="../assets/img/master-placeholder.svg" alt="Фото репетитора" loading="lazy">
+          <figcaption>Елена Сергеевна</figcaption>
+        </figure>
+
+        <div class="about__text" data-reveal>
+          <span class="head__kicker">Обо мне</span>
+          <h2 class="head__title head__title--left">Девять лет объясняю сложное простыми словами</h2>
+          <p>Окончила МПГУ по специальности «учитель математики и физики». Работала в школе, последние годы — частная практика.</p>
+          <p>Не ругаю за «глупые» вопросы и не гоню по программе вперёд, если тема не улеглась. Считаю, что страх перед доской мешает больше, чем незнание формул.</p>
+          <ul class="about__facts">
+            <li>МПГУ, преподаватель математики и физики</li>
+            <li>Эксперт ОГЭ по математике</li>
+            <li>Готовлю к экзаменам с 2017 года</li>
+          </ul>
+          <a class="btn btn--primary" href="#booking">Записаться на пробное</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICE ============ -->
+    <section class="section section--paper" id="price">
+      <div class="wrap">
+        <header class="head" data-reveal>
+          <span class="head__kicker">Стоимость</span>
+          <h2 class="head__title">Цены и форматы</h2>
+          <p class="head__sub">Одно занятие — 60 минут. Формат выбираете вы: онлайн или у меня.</p>
+        </header>
+
+        <div class="price-cards" id="price-cards" data-reveal></div>
+
+        <div class="packages" data-reveal>
+          <h3 class="packages__title">Пакеты занятий — выгоднее</h3>
+          <div class="packages__grid" id="packages-grid"></div>
+          <p class="packages__note">Скидка считается от стоимости предмета. Оплата за пакет — перед первым занятием.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REVIEWS ============ -->
+    <section class="section" id="reviews">
+      <div class="wrap">
+        <header class="head" data-reveal>
+          <span class="head__kicker">Отзывы</span>
+          <h2 class="head__title">Что говорят родители и ученики</h2>
+        </header>
+
+        <div class="reviews" data-reveal>
+          <figure class="review">
+            <blockquote>«Соня боялась геометрии до паники. За полгода вышла на твёрдую четвёрку по ОГЭ. Елена объясняет так, что наконец-то понятно».</blockquote>
+            <figcaption>Ольга, мама ученицы 9 класса</figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote>«Занимался онлайн, готовился к ЕГЭ по физике. 79 баллов, поступил на бюджет. Отдельное спасибо за разбор ошибок без осуждения».</blockquote>
+            <figcaption>Артём, выпускник</figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote>«Всегда на связи, раз в месяц присылает отчёт по сыну. Видно, где мы просели и что делать. Это дорогого стоит».</blockquote>
+            <figcaption>Ирина, мама ученика 11 класса</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section--paper" id="faq">
+      <div class="wrap">
+        <header class="head" data-reveal>
+          <span class="head__kicker">Вопросы</span>
+          <h2 class="head__title">Частые вопросы</h2>
+        </header>
+
+        <div class="faq" data-reveal>
+          <details class="faq__item">
+            <summary>Пробное занятие платное?</summary>
+            <p>Первое занятие — 500 ₽, это полноценные 60 минут с диагностикой. Дальше решаете, продолжаем или нет.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Сколько занятий нужно, чтобы подтянуть?</summary>
+            <p>Зависит от пробелов. Обычно для ОГЭ хватает 1–2 занятий в неделю в течение учебного года. На пробном занятии скажу честно, реально ли уложиться в ваш срок.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Как проходит онлайн-занятие?</summary>
+            <p>Созваниваемся по видео, пишу на общей онлайн-доске. Ученик видит всё, что я объясняю, и может писать сам. Домашку скидываю после занятия.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Можно переносить занятия?</summary>
+            <p>Да, но не позднее чем за 24 часа. Если предупредить позже, занятие списывается — место уже забронировано за вами.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Вы занимаетесь в группах?</summary>
+            <p>Да, есть мини-группы по 3–4 человека и занятия в паре. Это дешевле индивидуальных и подходит для мотивированных учеников.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING ============ -->
+    <section class="section section--ink booking" id="booking">
+      <div class="wrap booking__inner">
+        <aside class="booking__aside" data-reveal>
+          <span class="head__kicker">Запись</span>
+          <h2 class="head__title head__title--left">Записаться на занятие</h2>
+          <p class="booking__text">Выберите предмет, формат и свободное окно. Я подтвержу заявку и напишу вам.</p>
+          <ul class="booking__contacts">
+            <li><span>Телефон</span><a href="tel:+79990000000">+7 999 000-00-00</a></li>
+            <li><span>Telegram</span><a href="https://t.me/your_nickname" target="_blank" rel="noopener noreferrer">@your_nickname</a></li>
+            <li><span>Адрес</span><address>г. Москва, ул. Пречистенка, 24</address></li>
+          </ul>
+        </aside>
+
+        <form class="form" id="booking-form" novalidate data-reveal>
+          <input type="text" name="_gotcha" id="_gotcha" class="form__hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" id="timezone" name="timezone" value="">
+
+          <div class="f-field">
+            <label class="f-label" for="service">Предмет <i>*</i></label>
+            <select class="f-input f-select" id="service" name="service" required>
+              <option value="" selected disabled>— Выберите предмет —</option>
+            </select>
+            <span class="f-error" data-error-for="service" role="alert"></span>
+          </div>
+
+          <div class="f-field">
+            <label class="f-label" for="format">Формат</label>
+            <select class="f-input f-select" id="format" name="format">
+              <option value="online">Онлайн</option>
+              <option value="offline">У преподавателя</option>
+              <option value="student">У меня (выезд)</option>
+            </select>
+          </div>
+
+          <div class="f-field">
+            <label class="f-label">Свободное окно <i>*</i></label>
+            <div class="slots">
+              <div class="slots__days" id="slots-days" role="tablist" aria-label="Выбор дня"></div>
+              <div class="slots__grid" id="slots-grid" aria-live="polite"></div>
+            </div>
+            <input type="hidden" id="datetime" name="datetime">
+            <span class="f-error" data-error-for="datetime" role="alert"></span>
+          </div>
+
+          <div class="f-field f-field--checks">
+            <label class="f-check" for="trial">
+              <input class="f-checkbox" type="checkbox" id="trial" name="trial" value="yes">
+              <span>Хочу <b>пробное занятие</b> (500 ₽)</span>
+            </label>
+
+            <label class="f-check" for="repeat">
+              <input class="f-checkbox" type="checkbox" id="repeat" name="repeat" value="weekly">
+              <span>Заниматься <b>каждую неделю</b> в это время</span>
+            </label>
+
+            <div class="f-weeks" id="weeks-field" hidden>
+              <label class="f-label" for="weeks">Сколько недель вперёд забронировать</label>
+              <select class="f-input f-select" id="weeks" name="weeks">
+                <option value="4">4 недели</option>
+                <option value="8">8 недель</option>
+                <option value="12">12 недель</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="f-grid">
+            <div class="f-field">
+              <label class="f-label" for="name">Имя <i>*</i></label>
+              <input class="f-input" type="text" id="name" name="name" placeholder="Имя ученика или ваше" autocomplete="name" required>
+              <span class="f-error" data-error-for="name" role="alert"></span>
+            </div>
+
+            <div class="f-field">
+              <label class="f-label" for="phone">Телефон <i>*</i></label>
+              <input class="f-input" type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" inputmode="tel" required>
+              <span class="f-error" data-error-for="phone" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="f-field">
+            <label class="f-label" for="comment">Комментарий</label>
+            <textarea class="f-input" id="comment" name="comment" rows="3" placeholder="Класс, цель, что уже получается..."></textarea>
+          </div>
+
+          <div class="f-field f-field--check">
+            <label class="f-check" for="privacy">
+              <input class="f-checkbox" type="checkbox" id="privacy" name="privacy" value="yes" required>
+              <span>Согласна с <a href="../privacy.html" target="_blank" rel="noopener">политикой конфиденциальности</a> и на обработку данных <i>*</i></span>
+            </label>
+            <span class="f-error" data-error-for="privacy" role="alert"></span>
+          </div>
+
+          <button class="btn btn--primary btn--lg btn--block form__submit" type="submit">Записаться</button>
+
+          <p class="form__success" id="form-success" role="status" aria-live="polite" hidden>
+            ✦ Спасибо! Заявка отправлена — я свяжусь с вами, чтобы подтвердить время.
+          </p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark">ЕС</span>
+        <strong>Елена Сергеевна</strong>
+        <p>Репетитор по математике, физике и информатике. Москва и онлайн.</p>
+      </div>
+
+      <div class="footer__col">
+        <h3>Контакты</h3>
+        <a href="tel:+79990000000">+7 999 000-00-00</a>
+        <a href="https://t.me/your_nickname" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <span>Ежедневно, 10:00 — 21:00</span>
+      </div>
+
+      <div class="footer__col">
+        <h3>Разделы</h3>
+        <a href="#subjects">Предметы</a>
+        <a href="#price">Цены</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#booking">Запись</a>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 Елена Сергеевна</span>
+        <a href="../privacy.html">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="sticky" id="sticky" href="#booking">Записаться на пробное</a>
+
+  <script>window.NAILS_ROLE = 'tutor';</script>
+  <script src="../shared/store.js"></script>
+  <script src="../shared/booking.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

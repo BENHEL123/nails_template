@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1280" viewBox="0 0 720 1280" role="img" aria-label="Плейсхолдер видео">
+  <defs>
+    <linearGradient id="pbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#efe0d4"/>
+      <stop offset="0.5" stop-color="#e6d0c0"/>
+      <stop offset="1" stop-color="#d8bcae"/>
+    </linearGradient>
+    <radialGradient id="pglow" cx="0.5" cy="0.4" r="0.55">
+      <stop offset="0" stop-color="#fffaf6"/>
+      <stop offset="1" stop-color="#fffaf6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="720" height="1280" fill="url(#pbg)"/>
+  <rect width="720" height="1280" fill="url(#pglow)"/>
+  <circle cx="360" cy="500" r="170" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2"/>
+  <path d="M330 470 v60 l52 -30 z" fill="#ffffff" fill-opacity="0.75"/>
+</svg>
